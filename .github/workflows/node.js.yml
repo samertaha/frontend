@@ -25,6 +25,5 @@ jobs:
           cache: 'npm'
       - run: npm cache clear --force
       - run: npm i
-      - run: sudo npm audit fix
       - run: npm run build
       - run: cp -a /home/ubuntu/frontend/work/frontend/frontend/build/. /var/www/html/
