@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <h1>hello frontend its salem saqr</h1>
+      <h1>Continious deployment made right</h1>
     </div>
   );
 }

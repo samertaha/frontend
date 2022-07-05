@@ -23,5 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm install
+      - run: sudo rm -rf /home/ubuntu/frontend/work/frontend/frontend/node_modules
+      - run: npm ci
+      - run: sudo npm audit fix
       - run: npm run build
+      - run: cp -a /home/ubuntu/frontend/work/frontend/frontend/build/. /var/www/html/
