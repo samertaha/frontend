@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: sudo rm -r /home/ubuntu/frontend/work/frontend/frontend/node_modules
+      - run: rm -r /home/ubuntu/frontend/work/frontend/frontend/node_modules
       - run: npm cache clean
       - run: npm i
       - run: sudo npm audit fix
