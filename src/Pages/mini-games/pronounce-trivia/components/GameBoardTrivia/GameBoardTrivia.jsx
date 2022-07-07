@@ -12,7 +12,9 @@ const GameBoardTrivia = (props) => {
   const [arabicWrongAnswers, setArabicWrongAnswers] = useState([]);
   const [hebrewWrongAnswers, setHebrewWrongAnswers] = useState([]);
   const [wordsIndex, setWordsIndex] = useState(0);
-  //const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  let correctAnswersVar = correctAnswers;
+  correctAnswersVar = 1;
   const [isHebrewWord, setIsHebrewWord] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null);

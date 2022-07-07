@@ -87,7 +87,7 @@ const GameBoardMemory = (props) => {
       // increase the moves once we opened a pair
       setMoves((moves) => moves + 1);
       let somvar = moves;
-      smevar = moves + 1;
+      somvar = moves + 1;
     } else {
       // If two cards are already open, cancel timeout set for flipping cards back
       clearTimeout(timeout.current);
