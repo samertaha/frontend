@@ -26,5 +26,3 @@ jobs:
       - run: npm cache clear --force
       - run: npm i
       - run: npm run build
-      env:
-         CI: ""
