@@ -9,10 +9,10 @@ const GameBoardMemory = (props) => {
   const [cards, setCards] = useState([]);
   const [openCards, setOpenCards] = useState([]);
   const [clearedCards, setClearedCards] = useState({});
-  //const [moves, setMoves] = useState(0);
+  const [moves, setMoves] = useState(0);
   const [pairsLeft, setPairsLeft] = useState(6);
   const [turn, setTurn] = useState(true);
-  //const [preventSecondClick, setPreventSecondClick] = useState(true);
+  const [preventSecondClick, setPreventSecondClick] = useState(true);
   const [disableClicking, setDisableClicking] = useState(false);
   const timeout = useRef(null);
 
@@ -80,10 +80,14 @@ const GameBoardMemory = (props) => {
   const handleCardClick = (index) => {
     // Have a maximum of 2 items in array at once.
     setPreventSecondClick(true);
+    let preventSecondClickVar = preventSecondClick;
+    preventSecondClickVar = false;
     if (openCards.length === 1) {
       setOpenCards((prev) => [...prev, index]);
       // increase the moves once we opened a pair
       setMoves((moves) => moves + 1);
+      let somvar = moves;
+      smevar = moves + 1;
     } else {
       // If two cards are already open, cancel timeout set for flipping cards back
       clearTimeout(timeout.current);
