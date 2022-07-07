@@ -1,0 +1,21 @@
+#Logo {
+  height: 100%;
+}
+.buttom {
+  transform: rotateZ(180deg);
+}
+.big {
+  animation: larging 4s;
+}
+@keyframes larging {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}

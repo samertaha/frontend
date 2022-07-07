@@ -1,0 +1,19 @@
+.trivia-answers {
+  width: 90%;
+  height: 17%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.answer-card {
+  color: #ffffff;
+  background-color: #ec9b6a;
+  text-align: center;
+  margin: 4%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

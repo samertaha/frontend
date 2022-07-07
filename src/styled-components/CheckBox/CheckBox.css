@@ -1,0 +1,28 @@
+#CheckBox {
+  height: 15vmin;
+  width: 15vmin;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2rem;
+  color: transparent;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 700px) {
+  #CheckBox {
+    font-size: 1.6rem;
+  }
+}
+.on {
+  border: transparent solid 3px;
+  background-color: #ec9b6a;
+  /* color: #ffffff; */
+  text-shadow: 0 0 0 #ffffff;
+}
+.off {
+  text-shadow: 0 0 0 #ec9b6a;
+  background-color: #ffffff;
+  border: #ec9b6a solid 3px;
+}

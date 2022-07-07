@@ -1,0 +1,7 @@
+.GameBoardMemory {
+  display: grid;
+  grid-template-columns: repeat(3, 27vmin);
+  grid-template-rows: repeat(4, 27vmin);
+  gap: 2%;
+  width: 84.5%;
+}

@@ -1,0 +1,23 @@
+.trivia-game-board {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60%;
+}
+.switchPlaces {
+  animation: heighting 1s;
+}
+
+@keyframes heighting {
+  0% {
+    gap: 60%;
+  }
+  50% {
+    gap: 100%;
+  }
+  100% {
+    gap: 60%;
+  }
+}

@@ -1,0 +1,10 @@
+#TriviaQuestion {
+  text-align: center;
+}
+
+#TriviaQuestion h1 {
+  font-size: 3rem;
+}
+#TriviaQuestion h3 {
+  font-size: 2rem;
+}

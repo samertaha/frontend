@@ -1,0 +1,17 @@
+#TurnPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 16%;
+  padding: 6% 12%;
+  transition: 0.5s;
+}
+
+#TurnPanel h1 {
+  font-size: 3rem;
+}
+
+.notPlaying {
+  opacity: 0.2;
+}
