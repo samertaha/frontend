@@ -21,29 +21,29 @@ const GameBoardMemory = (props) => {
       props.isDone(true);
     }
   }, [pairsLeft, props]);
-  const randomizeAndFill = async () => {
-    // randomly choose 6 word objects from data to fill 12 tiles
-    let arrayOfWordObjects = [];
-    let i = 0;
-    let rawData = await getWords();
-    while (i < 6) {
-      let randomIndex = Math.floor(Math.random() * rawData.length);
-      arrayOfWordObjects.push(rawData[randomIndex]);
-      i++;
-    }
-    // make array of {word & ID} pairs from hebrew and arabic and id
-    let wordsArray = [];
-    arrayOfWordObjects.forEach((word, i) => {
-      wordsArray.push(
-        { word: word.hebrew, id: i },
-        { word: word.arabic, id: i, isArabic: true }
-      );
-    });
-    let shuffled = shuffleRandomly(wordsArray);
-    setCards(shuffled);
-  };
 
   useEffect(() => {
+    const randomizeAndFill = async () => {
+      // randomly choose 6 word objects from data to fill 12 tiles
+      let arrayOfWordObjects = [];
+      let i = 0;
+      let rawData = await getWords();
+      while (i < 6) {
+        let randomIndex = Math.floor(Math.random() * rawData.length);
+        arrayOfWordObjects.push(rawData[randomIndex]);
+        i++;
+      }
+      // make array of {word & ID} pairs from hebrew and arabic and id
+      let wordsArray = [];
+      arrayOfWordObjects.forEach((word, i) => {
+        wordsArray.push(
+          { word: word.hebrew, id: i },
+          { word: word.arabic, id: i, isArabic: true }
+        );
+      });
+      let shuffled = shuffleRandomly(wordsArray);
+      setCards(shuffled);
+    };
     getWords();
     randomizeAndFill();
   }, [randomizeAndFill]);
