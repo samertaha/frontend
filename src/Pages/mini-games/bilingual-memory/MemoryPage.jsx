@@ -1,11 +1,11 @@
-import GameBoardMemory from './components/GameBoardMemory/GameBoardMemory';
-import React, { useEffect, useState } from 'react';
-//import TurnPanel from "./components/TurnPanel/TurnPanel";
-import './MemoryPage.css';
-import ExplanationSlide from '../../../globalSlides/explanationSlide/ExplanationSlide';
-import { useNavigate } from 'react-router-dom';
+import GameBoardMemory from "./components/GameBoardMemory/GameBoardMemory";
+import React, { useEffect, useState } from "react";
+import TurnPanel from "./components/TurnPanel/TurnPanel";
+import "./MemoryPage.css";
+import ExplanationSlide from "../../../globalSlides/explanationSlide/ExplanationSlide";
+import { useNavigate } from "react-router-dom";
 const MemoryPage = () => {
-  //const [currentPlayer, setCurrentPlayer] = useState();
+  const [currentPlayer, setCurrentPlayer] = useState();
   const [check, setCheck] = useState(false);
   const [check2, setCheck2] = useState(false);
   const [check3, setCheck3] = useState(false);
@@ -15,7 +15,7 @@ const MemoryPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (check3 && check4) {
-      navigate('/pronounce');
+      navigate("/pronounce");
     }
   });
   useEffect(() => {
@@ -24,7 +24,7 @@ const MemoryPage = () => {
     }
   }, [check, check2]);
   return (
-    <div id='MemoryPage' className='page '>
+    <div id="MemoryPage" className="page ">
       <ExplanationSlide
         hiden={hide}
         action1={setCheck}
@@ -38,13 +38,11 @@ const MemoryPage = () => {
           </span>
         }
         aText={
-          <span>
-            <h2>لعبة الذاكرة</h2> في اللعبة التالية ، ستظهر الكلمات خلف نصف
-            البطاقات بالعبرية وفي النصف الثاني ، ستظهر ترجمتهم باللغة العربية.
-            يفتح كل لاعب بطاقة واحدة أن تجد زوجًا من الكلمات المتطابقة بلغات
-            مختلفة.
-          </span>
-        }
+        <span>
+          <h2>لعبة الذاكرة</h2> في اللعبة التالية ، ستظهر الكلمات خلف نصف البطاقات
+             بالعبرية وفي النصف الثاني ، ستظهر ترجمتهم باللغة العربية. يفتح كل لاعب بطاقة واحدة
+             أن تجد زوجًا من الكلمات المتطابقة بلغات مختلفة.
+        </span>}
       />
       {/* <TurnPanel isPlaying={true} /> */}
       <GameBoardMemory isDone={setEnd} />
@@ -55,8 +53,8 @@ const MemoryPage = () => {
         action1={setCheck3}
         action2={setCheck4}
         isAbsulute={true}
-        hText='כל הכבוד'
-        aText='لابورأس نيسي س'
+        hText="כל הכבוד"
+        aText="لابورأس نيسي س"
       />
     </div>
   );

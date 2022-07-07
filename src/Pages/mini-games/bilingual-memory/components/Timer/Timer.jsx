@@ -1,6 +1,6 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
-import './Timer.css';
+import ReactDOM from 'react-dom';
+import "./Timer.css";
 // const Timer = () => {
 //   return (
 //     <p id="Timer" className="pC number">
@@ -8,6 +8,8 @@ import './Timer.css';
 //     </p>
 //   );
 // };
+
+
 
 class Timer extends React.Component {
   constructor() {
@@ -18,7 +20,7 @@ class Timer extends React.Component {
     this.countDown = this.countDown.bind(this);
   }
 
-  secondsToTime(secs) {
+  secondsToTime(secs){
     let hours = Math.floor(secs / (60 * 60));
 
     let divisor_for_minutes = secs % (60 * 60);
@@ -28,9 +30,9 @@ class Timer extends React.Component {
     let seconds = Math.ceil(divisor_for_seconds);
 
     let obj = {
-      h: hours,
-      m: minutes,
-      s: seconds,
+      "h": hours,
+      "m": minutes,
+      "s": seconds
     };
     return obj;
   }
@@ -41,7 +43,7 @@ class Timer extends React.Component {
   }
 
   startTimer() {
-    if (this.timer === 0 && this.state.seconds > 0) {
+    if (this.timer == 0 && this.state.seconds > 0) {
       this.timer = setInterval(this.countDown, 1000);
     }
   }
@@ -53,19 +55,20 @@ class Timer extends React.Component {
       time: this.secondsToTime(seconds),
       seconds: seconds,
     });
-
+    
     // Check if we're at zero.
-    if (seconds === 0) {
+    if (seconds == 0) { 
       clearInterval(this.timer);
     }
   }
 
   render() {
-    return (
-      <p id='Timer' className='pC number'>
-        {this.state.time.s}
+    return(
+      <p id="Timer" className="pC number" >
+     {this.state.time.s}
       </p>
     );
   }
 }
 export default Timer;
+
