@@ -26,4 +26,3 @@ jobs:
       - run: npm cache clear --force
       - run: npm i
       - run: npm run build
-      - run: cp -a /home/ubuntu/frontend/work/frontend/frontend/build/. /var/www/html/
