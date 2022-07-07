@@ -21,17 +21,6 @@ const GameBoardMemory = (props) => {
       props.isDone(true);
     }
   }, [pairsLeft, props]);
-
-  useEffect(() => {
-    getWords();
-    randomizeAndFill();
-  }, [randomizeAndFill]);
-
-  const getWords = async () => {
-    let { data } = await gotchya.get('/wordBank');
-    return data;
-  };
-
   const randomizeAndFill = async () => {
     // randomly choose 6 word objects from data to fill 12 tiles
     let arrayOfWordObjects = [];
@@ -52,6 +41,16 @@ const GameBoardMemory = (props) => {
     });
     let shuffled = shuffleRandomly(wordsArray);
     setCards(shuffled);
+  };
+
+  useEffect(() => {
+    getWords();
+    randomizeAndFill();
+  }, [randomizeAndFill]);
+
+  const getWords = async () => {
+    let { data } = await gotchya.get('/wordBank');
+    return data;
   };
 
   // Check if both the words have same id. If so, mark them inactive
