@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cd06d15b.css",
+    "main.js": "/static/js/main.c61959b0.js",
+    "static/media/svg": "/static/media/89d11a443c316da80dcb8f5e1f63c86e.bc7b04638bbee145e4ef.svg",
+    "static/media/eot": "/static/media/89d11a443c316da80dcb8f5e1f63c86e.1bb8075ef01979364342.eot",
+    "static/media/ttf": "/static/media/89d11a443c316da80dcb8f5e1f63c86e.6d785e39c9cd2bb2f181.ttf",
+    "static/media/woff": "/static/media/89d11a443c316da80dcb8f5e1f63c86e.6f2ed61c52c1ed8f52ab.woff",
+    "static/media/woff2": "/static/media/89d11a443c316da80dcb8f5e1f63c86e.f818fa12a5b6cc33f36b.woff2",
+    "static/media/Logo.svg": "/static/media/Logo.601291a05b1815f717372cca95939195.svg",
+    "static/media/sittingArabic.svg": "/static/media/sittingArabic.607298d53928e49c0a22b5248c666e11.svg",
+    "static/media/sittingHebrew.svg": "/static/media/sittingHebrew.e0300bcf0c39893b30ce62d3fd6ddcce.svg",
+    "static/media/roundLogo.svg": "/static/media/roundLogo.e2d72b3ac436e09c405b530789ffe3a7.svg",
+    "static/media/phone.svg": "/static/media/phone.8e5ad95b9f29ae726f4ca5e2fb6df058.svg",
+    "index.html": "/index.html",
+    "main.cd06d15b.css.map": "/static/css/main.cd06d15b.css.map",
+    "main.c61959b0.js.map": "/static/js/main.c61959b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd06d15b.css",
+    "static/js/main.c61959b0.js"
+  ]
+}
